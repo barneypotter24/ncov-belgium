@@ -1,0 +1,100 @@
+auspice_json_prefix: ncov_belgium
+
+# Define any custom rules
+# custom_rules:
+#   - path/to/rule.smk
+
+genes: ["ORF1a", "ORF1b", "S", "ORF3a", "M", "N"]
+use_nextalign: true
+
+inputs:
+  - name: preprocessed
+    # metadata: "data/ALL_METADATA.tsv.gz"
+    # aligned: "data/ALL_SEQUENCES.fasta.gz"
+    metadata: "../ncov-belgium/data/test_metadata.tsv"
+    aligned: "../ncov-belgium/data/test_sequences_aligned.fasta"
+
+builds:
+  demo:
+    region: Europe
+    country: Belgium
+    colors: "../ncov-belgium/be_profiles/colors.tsv"
+    title: "SARS-CoV-2 Sequences in Belgium"
+
+  # omicron:
+  #   region: Europe
+  #   colors: "ncov-belgium/be_profiles/colors.tsv"
+  #   title: "SARS-CoV-2 Omicron phylogeny"
+
+  # eta_large:
+  #   region: Europe
+  #   colors: "ncov-belgium/be_profiles/colors.tsv"
+  #   title: "SARS-CoV-2 B.1.525 phylogeny"
+
+  # AY.4.2:
+  #   region: global
+  #   colors: "ncov-belgium/be_profiles/colors.tsv"
+  #   title: "SARS-CoV-2 AY.4.2 ML phylogeny"
+
+  # B.1.525:
+  #   region: Europe
+  #   country: Belgium
+  #   colors: "ncov-belgium/be_profiles/colors.tsv"
+  #   title: "SARS-CoV-2 B.1.525 Sequences in Belgium"
+
+  # B.1.1.7:
+  #   region: Europe
+  #   country: Belgium
+  #   colors: "ncov-belgium/be_profiles/colors.tsv"
+  #   title: "SARS-CoV-2 B.1.1.7 Sequences in Belgium"
+
+  # B.1.214:
+  #   region: Europe
+  #   country: Belgium
+  #   colors: "ncov-belgium/be_profiles/colors.tsv"
+  #   title: "SARS-CoV-2 B.1.214 + A.2.5 ML phylogeny"
+
+  # B.1.617:
+  #   region: Europe
+  #   country: Belgium
+  #   colors: "ncov-belgium/be_profiles/colors.tsv"
+  #   title: "SARS-CoV-2 B.1.617 Sequences in Belgium"
+
+  # B.1.617.1:
+  #   region: Europe
+  #   country: Belgium
+  #   colors: "ncov-belgium/be_profiles/colors.tsv"
+  #   title: "SARS-CoV-2 B.1.617.1 Sequences prior to May 2021"
+
+  # B.1.617.2:
+  #   region: Europe
+  #   country: Belgium
+  #   colors: "ncov-belgium/be_profiles/colors.tsv"
+  #   title: "SARS-CoV-2 B.1.617.2 Sequences prior to May 2021"
+
+  # delta:
+  #   region: Europe
+  #   country: Belgium
+  #   colors: "ncov-belgium/be_profiles/colors.tsv"
+  #   title: "SARS-CoV-2 Delta Sequences highlighting Belgium."
+
+  # B.1.619-B.1.620:
+  #   region: Europe
+  #   country: Belgium
+  #   colors: "ncov-belgium/be_profiles/colors.tsv"
+  #   title: "SARS-CoV-2 B.1.619 and B.1.620 Sequences Globally"
+
+  # B.1.620:
+  #   region: Europe
+  #   country: Lithuania
+  #   colors: "ncov-belgium/be_profiles/colors.tsv"
+  #   title: "SARS-CoV-2 B.1.620"
+
+  # P.1:
+  #   region: Europe
+  #   country: Belgium
+  #   colors: "ncov-belgium/be_profiles/colors.tsv"
+  #   title: "SARS-CoV-2 P.1 Sequences in Belgium"
+
+files:
+  description: "../ncov-belgium/be_profiles/be_description.md"

@@ -1,0 +1,34 @@
+auspice_json_prefix: ncov_belgium
+
+# Define any custom rules
+# custom_rules:
+#   - path/to/rule.smk
+
+genes: ["ORF1a", "ORF1b", "S", "ORF3a", "M", "N"]
+use_nextalign: true
+
+inputs:
+  - name: preprocessed
+    metadata: "data/ALL_METADATA.tsv.gz"
+    aligned: "data/ALL_SEQUENCES.fasta.gz"
+
+builds:
+  eta_small:
+    region: Europe
+    colors: "my_profiles/sars-cov-2-belgium/colors.tsv"
+    subsampling_scheme: eta_small_dataset
+    title: "SARS-CoV-2 B.1.525 (small dataset) phylogeny"
+
+files:
+  description: "ncov-belgium/be_profiles/be_description.md"
+
+subsampling:
+  eta_small_dataset:
+    eta_focus:
+      query: --query "pango_lineage == 'B.1.525'"
+      group_by: "country year month"
+      max_sequences: 2500
+      sampling_scheme: "--probabilistic-sampling"
+
+tree:
+  tree_builder_args: "-nt 18 -m GTR+F+R2"
