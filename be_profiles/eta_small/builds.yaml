@@ -15,7 +15,7 @@ inputs:
 builds:
   eta_large:
     region: global
-    colors: "../ncov-belgium/ncov-belgium/be_profiles/colors.tsv"
+    colors: "../ncov-belgium/be_profiles/colors.tsv"
     title: "SARS-CoV-2 B.1.525 phylogeny"
 
 files:
