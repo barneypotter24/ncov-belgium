@@ -9,10 +9,10 @@ use_nextalign: true
 
 inputs:
   - name: preprocessed
-    # metadata: "data/ALL_METADATA.tsv.gz"
-    # aligned: "data/ALL_SEQUENCES.fasta.gz"
-    metadata: "../ncov-belgium/data/test_metadata.tsv"
-    aligned: "../ncov-belgium/data/test_sequences_aligned.fasta"
+    metadata: "data/ALL_METADATA.tsv.gz"
+    sequences: "data/ALL_SEQUENCES.fasta.gz"
+    # metadata: "../ncov-belgium/data/test_metadata.tsv"
+    # aligned: "../ncov-belgium/data/test_sequences_aligned.fasta"
 
 builds:
   demo:

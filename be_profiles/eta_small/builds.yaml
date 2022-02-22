@@ -1,0 +1,22 @@
+auspice_json_prefix: ncov_belgium
+
+# Define any custom rules
+# custom_rules:
+#   - path/to/rule.smk
+
+genes: ["ORF1a", "ORF1b", "S", "ORF3a", "M", "N"]
+use_nextalign: true
+
+inputs:
+  - name: preprocessed
+    metadata: "../ncov-belgium/data/ALL_METADATA.tsv.gz"
+    aligned: "../ncov-belgium/data/eta_small.aligned.fasta.gz"
+
+builds:
+  eta_large:
+    region: global
+    colors: "../ncov-belgium/ncov-belgium/be_profiles/colors.tsv"
+    title: "SARS-CoV-2 B.1.525 phylogeny"
+
+files:
+  description: "../ncov-belgium/be_profiles/be_description.md"
